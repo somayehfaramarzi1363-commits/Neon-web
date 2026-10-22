@@ -9,7 +9,6 @@ load_dotenv()
 app = Flask(__name__, static_folder="web-design-business", static_url_path="")
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-
 @app.get("/")
 def home():
     return app.send_static_file("index.html")
