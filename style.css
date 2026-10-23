@@ -20,3 +20,27 @@ video,
 iframe {
   max-width: 100%;
 }
+@media (max-width: 680px) {
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .orbit,
+  .orbit-b {
+    max-width: 100%;
+  }
+
+  .portfolio-art {
+    max-width: 100%;
+  }
+
+  .section-shell,
+  .site-header,
+  .content-section,
+  .order-layout {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
