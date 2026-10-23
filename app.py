@@ -39,11 +39,12 @@ def create_order():
         with psycopg2.connect(DATABASE_URL, connect_timeout=10) as conn:
             with conn.cursor() as cur:
                 cur.execute(
-                    """INSERT INTO public.website_orders
-                       (name, contact, site_type, details, budget)
-                       VALUES (%s, %s, %s, %s, %s)
-                       RETURNING id""",
-                    (name, contact, site_type, details, budget),
+    """INSERT INTO public.website_orders
+       (customer_name, customer_email, service_type,
+        project_details, budget)
+       VALUES (%s, %s, %s, %s, %s)
+       RETURNING id""",
+    (name, contact, site_type, details, budget),
                 )
                 order_id = cur.fetchone()[0]
         return jsonify(message="سفارش ثبت شد.", order_id=order_id), 201
