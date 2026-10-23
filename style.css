@@ -7,3 +7,16 @@ html[dir="ltr"] .section-label{text-align:left}html[dir="ltr"] .hero-visual .chi
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 .service-card,.portfolio-card,.process-grid article{transition:transform .25s ease,border-color .25s ease,opacity .45s ease}.service-card.in-view,.portfolio-card.in-view,.process-grid article.in-view{animation:rise-in .55s ease both}@keyframes rise-in{from{opacity:.72;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+/* Mobile horizontal overflow fix */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
