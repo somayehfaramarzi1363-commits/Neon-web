@@ -5,6 +5,9 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 
 load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 app = Flask(__name__, static_folder=".", static_url_path="")
 
 @app.get("/")
