@@ -44,3 +44,31 @@ iframe {
     max-width: 100%;
   }
 }
+@media (max-width: 680px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .site-header,
+  .section-shell {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero,
+  .content-section,
+  .order-layout,
+  .site-footer {
+    width: 100%;
+    max-width: 100%;
+  }
+}
